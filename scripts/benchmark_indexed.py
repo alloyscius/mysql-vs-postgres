@@ -110,7 +110,7 @@ def run_benchmark():
                 end = time.time()
                 pg_times.append(end - start)
             
-            pg_avg = round(statistics.mean(pg_times), 5) # Increased precision
+            pg_avg = round(statistics.mean(pg_times), 5)
             print(f"PostgreSQL Avg Time: {pg_avg}s")
 
             # Measure MySQL

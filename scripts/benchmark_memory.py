@@ -40,7 +40,7 @@ def test_postgres():
     conn = psycopg2.connect(**PG_CONFIG)
     cursor = conn.cursor()
     cursor.execute(query_pg)
-    rows = cursor.fetchall() # Fetch 50k rows into memory
+    rows = cursor.fetchall()
     conn.close()
     return len(rows)
 
@@ -48,7 +48,7 @@ def test_mysql():
     conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor()
     cursor.execute(query_mysql)
-    rows = cursor.fetchall() # Fetch 50k rows into memory
+    rows = cursor.fetchall()
     conn.close()
     return len(rows)
 
